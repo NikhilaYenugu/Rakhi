@@ -23,7 +23,7 @@
       display: flex;
       gap: 40px;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap; /* prevent wrapping so message stays next to image */
     }
     img.main-photo {
       max-width: 320px;
@@ -32,7 +32,7 @@
       flex-shrink: 0;
     }
     .message {
-      max-width: 520px;
+      flex: 1; /* fill remaining space */
       font-size: 20px;
       line-height: 1.6;
       white-space: pre-line;
@@ -57,7 +57,6 @@
 
   <div class="container">
 
-    <!-- Make sure the filename matches exactly with case -->
     <img src="rakhi-photo.jpg" alt="Rakhi Celebration Picture" class="main-photo" />
 
     <div class="message">
@@ -76,25 +75,23 @@
 
       I love you💞💖!
       
-     <audio id="audio" controls loop>
-  <source src="sunshine.mp3.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
-
-<script>
-  window.addEventListener('load', () => {
-    const audio = document.getElementById('audio');
-    audio.play().catch(() => {
-      // Autoplay was prevented.
-      // Show a button or message to let user start audio manually
-      console.log('Autoplay prevented, please click to play audio.');
-    });
-  });
-</script>
- </div>
+      <audio id="audio" controls loop>
+        <source src="sunshine.mp3.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
   </div>
 
+  <script>
+    window.addEventListener('load', () => {
+      const audio = document.getElementById('audio');
+      audio.play().catch(() => {
+        // Autoplay was prevented.
+        console.log('Autoplay prevented, please click to play audio.');
+      });
+    });
+  </script>
+
 </body>
 </html>
-
