@@ -4,119 +4,128 @@
   <meta charset="UTF-8" />
   <title>Happy Rakhi!</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Noto+Serif&display=swap');
-
     body {
-      font-family: 'Noto Serif', serif, Arial, sans-serif;
-      background-color: #f9f9f5; /* soft off-white */
-      color: #1b3a2d; /* deep green */
-      margin: 40px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8e1; /* light yellow like Kerala */
+      color: #5d4037; /* warm brown */
+      margin: 0;
+      padding: 40px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 90vh;
-    } 
+      min-height: 100vh;
+      box-sizing: border-box;
+      position: relative;
+      overflow-x: hidden;
+    }
     .container {
       display: flex;
-      background: #ffffff; /* pure white mundu-like */
-      box-shadow: 0 6px 15px rgba(27, 58, 45, 0.2);
-      border-radius: 20px;
-      padding: 30px 40px;
-      max-width: 900px;
-      gap: 50px;
       align-items: center;
-      position: relative;
-      border: 5px solid #ffd54f; /* golden border */
-    }
-    /* Jasmine flower shape - Kerala style */
-    .jasmine-flower {
-      position: absolute;
-      width: 70px;
-      height: 70px;
-      background: #fff;
-      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-      box-shadow:
-        20px 20px 0 #fff,
-        -20px 20px 0 #fff,
-        20px -20px 0 #fff,
-        -20px -20px 0 #fff;
-      border: 3px solid #ffd54f;
-      top: -30px;
-      right: -30px;
-      filter: drop-shadow(0 0 6px #ffd740);
-      animation: gentle-pulse 4s infinite alternate;
-    }
-    @keyframes gentle-pulse {
-      0% { filter: drop-shadow(0 0 6px #ffd740); }
-      100% { filter: drop-shadow(0 0 15px #ffca28); }
-    }
-    img {
-      max-width: 320px;
+      max-width: 900px;
+      background: #fff3e0;
       border-radius: 15px;
-      box-shadow: 0 6px 12px rgba(27, 58, 45, 0.25);
-      border: 4px solid #1b3a2d;
-      background: #e8f5e9; /* subtle green background behind photo */
+      box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
+      padding: 30px;
+      gap: 30px;
+      z-index: 2;
+      position: relative;
+    }
+    img.main-photo {
+      max-width: 350px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(93, 64, 55, 0.25);
     }
     .message {
-      max-width: 480px;
       font-size: 20px;
-      line-height: 1.7;
+      line-height: 1.6;
+      flex: 1;
       white-space: pre-line;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      letter-spacing: 0.03em;
+      font-weight: 500;
     }
     audio {
       width: 100%;
       margin-top: 30px;
       outline: none;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(27, 58, 45, 0.1);
-      border: 2px solid #ffd54f;
-      background: #fffde7;
+    }
+    /* Jasmine flower corners */
+    .flower-top-left, .flower-bottom-right {
+      position: fixed;
+      width: 120px;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .flower-top-left {
+      top: 20px;
+      left: 20px;
+      transform: rotate(-15deg);
+    }
+    .flower-bottom-right {
+      bottom: 20px;
+      right: 20px;
+      transform: rotate(10deg);
+    }
+    /* Garland styling */
+    .garland {
+      display: block;
+      max-width: 400px;
+      margin: 40px auto 0 auto;
+      border-radius: 15px;
+      box-shadow: 0 3px 12px rgba(93, 64, 55, 0.2);
+      z-index: 2;
+      position: relative;
     }
     h1 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      color: #bf360c; /* traditional temple red */
-      margin-bottom: 24px;
-      text-align: center;
-      width: 100%;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      text-shadow: 1px 1px 2px #ffd54f;
+      position: fixed;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: "Brush Script MT", cursive;
+      font-size: 2.8rem;
+      color: #bf360c; /* deep orange */
+      text-shadow: 1px 1px 3px #ffd180;
+      z-index: 3;
+      user-select: none;
     }
   </style>
 </head>
 <body>
 
+  <h1>🌷🌻Happy Rakhi, Annaya!❤️</h1>
+
+  <!-- Jasmine flowers on corners -->
+  <img src="jasmine-flower.webp" alt="Jasmine flower" class="flower-top-left" />
+  <img src="jasmine-flower.webp" alt="Jasmine flower" class="flower-bottom-right" />
+
   <div class="container">
-    <div class="jasmine-flower"></div>
+    <!-- Main photo -->
+    <img src="rakhi-photo.jpg.JPG" alt="Rakhi Celebration Picture" class="main-photo" />
 
-    <img src="rakhi-photo.jpg" alt="Rakhi Celebration Picture" />
-
+    <!-- Your heartfelt message -->
     <div class="message">
-      <h1>Happy Rakhi, Annaya! 🎉</h1>
-      Happy Rakhi, Annaya!
+Happy Rakhi, Annaya!
 
-      You have been a lifesaver. I am everything I am because of you — all the good parts of me.  
-      I love you always and forever.
+You have been a lifesaver. I am everything I am because of you — all the good parts of me.
+I love you always and forever.
 
-      I hope I can give you all the things you did for me sometime soon.  
-      I will always wait for you to bring me your share of love and sorrows to share, just like those Cheetos packets back when we were kids.
+I hope I can give you all the things you did for me sometime soon.
+I will always wait for you to bring me your share of love and sorrows to share, just like those Cheetos packets back when we were kids.
 
-      Hope we can celebrate Diwali with our families this time around.  
-      Let’s always have each other’s back.
+Hope we can celebrate Diwali with our families this time around.
+Let’s always have each other’s back.
 
-      I love you!
+I love you!
     </div>
   </div>
 
-  <audio autoplay controls muted>
+  <!-- Garland decoration -->
+  <img src="garland.png" alt="Garland decoration" class="garland" />
+
+  <!-- Audio player with autoplay -->
+  <audio controls autoplay loop>
     <source src="You are my Sunshine-Nikki.mp3.m4a" type="audio/mp4" />
     Your browser does not support the audio element.
   </audio>
 
 </body>
 </html>
-
