@@ -4,66 +4,118 @@
   <meta charset="UTF-8" />
   <title>Happy Rakhi!</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Noto+Serif&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-      background-color: #fff8e1;
-      color: #5d4037;
+      font-family: 'Noto Serif', serif, Arial, sans-serif;
+      background-color: #f9f9f5; /* soft off-white */
+      color: #1b3a2d; /* deep green */
+      margin: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh;
+    }
+    .container {
+      display: flex;
+      background: #ffffff; /* pure white mundu-like */
+      box-shadow: 0 6px 15px rgba(27, 58, 45, 0.2);
+      border-radius: 20px;
+      padding: 30px 40px;
+      max-width: 900px;
+      gap: 50px;
+      align-items: center;
+      position: relative;
+      border: 5px solid #ffd54f; /* golden border */
+    }
+    /* Jasmine flower shape - Kerala style */
+    .jasmine-flower {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: #fff;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      box-shadow:
+        20px 20px 0 #fff,
+        -20px 20px 0 #fff,
+        20px -20px 0 #fff,
+        -20px -20px 0 #fff;
+      border: 3px solid #ffd54f;
+      top: -30px;
+      right: -30px;
+      filter: drop-shadow(0 0 6px #ffd740);
+      animation: gentle-pulse 4s infinite alternate;
+    }
+    @keyframes gentle-pulse {
+      0% { filter: drop-shadow(0 0 6px #ffd740); }
+      100% { filter: drop-shadow(0 0 15px #ffca28); }
     }
     img {
-      max-width: 300px;
+      max-width: 320px;
       border-radius: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    audio {
-      margin: 20px 0;
+      box-shadow: 0 6px 12px rgba(27, 58, 45, 0.25);
+      border: 4px solid #1b3a2d;
+      background: #e8f5e9; /* subtle green background behind photo */
     }
     .message {
-      max-width: 500px;
-      margin: 0 auto;
-      background: #fff3e0;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      max-width: 480px;
+      font-size: 20px;
+      line-height: 1.7;
       white-space: pre-line;
-      font-size: 18px;
-      line-height: 1.5;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    audio {
+      width: 100%;
+      margin-top: 30px;
+      outline: none;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(27, 58, 45, 0.1);
+      border: 2px solid #ffd54f;
+      background: #fffde7;
+    }
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #bf360c; /* traditional temple red */
+      margin-bottom: 24px;
+      text-align: center;
+      width: 100%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px #ffd54f;
     }
   </style>
 </head>
 <body>
 
-  <h1>Happy Rakhi, Annaya! 🎉</h1>
+  <div class="container">
+    <div class="jasmine-flower"></div>
 
-  <!-- Add your Rakhi picture here -->
-  <img src="rakhi-photo.jpg" alt="Rakhi Celebration Picture" />
+    <img src="rakhi-photo.jpg" alt="Rakhi Celebration Picture" />
 
-  <!-- Audio player -->
-  <audio controls>
-<source src="You are my Sunshine-Nikki.mp3.m4a" type="audio/mp4" />
+    <div class="message">
+      <h1>Happy Rakhi, Annaya! 🎉</h1>
+      Happy Rakhi, Annaya!
+
+      You have been a lifesaver. I am everything I am because of you — all the good parts of me.  
+      I love you always and forever.
+
+      I hope I can give you all the things you did for me sometime soon.  
+      I will always wait for you to bring me your share of love and sorrows to share, just like those Cheetos packets back when we were kids.
+
+      Hope we can celebrate Diwali with our families this time around.  
+      Let’s always have each other’s back.
+
+      I love you!
+    </div>
+  </div>
+
+  <audio autoplay controls muted>
+    <source src="You are my Sunshine-Nikki.mp3.m4a" type="audio/mp4" />
     Your browser does not support the audio element.
   </audio>
 
-  <!-- Your heartfelt message shown on the page -->
-  <div class="message">
-Happy Rakhi, Annaya!
-
-You have been a lifesaver. I am everything I am because of you — all the good parts of me.
-I love you always and forever.
-
-I hope I can give you all the things you did for me sometime soon.
-I will always wait for you to bring me your share of love and sorrows to share, just like those Cheetos packets back when we were kids.
-
-Hope we can celebrate Diwali with our families this time around.
-Let’s always have each other’s back.
-
-I love you!
-  </div>
-
 </body>
 </html>
-
-
-
