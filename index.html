@@ -23,11 +23,13 @@
       display: flex;
       gap: 40px;
       align-items: center;
+      flex-wrap: wrap;
     }
     img.main-photo {
       max-width: 320px;
       border-radius: 20px;
       box-shadow: 0 6px 14px rgba(46, 74, 31, 0.3);
+      flex-shrink: 0;
     }
     .message {
       max-width: 520px;
@@ -38,7 +40,7 @@
     h1 {
       font-size: 3em;
       margin-bottom: 20px;
-      color: #1b3410; /* even darker green for heading */
+      color: #1b3410; /* darker green */
       text-align: center;
       font-weight: normal;
     }
@@ -55,6 +57,7 @@
 
   <div class="container">
 
+    <!-- Make sure the filename matches exactly with case -->
     <img src="rakhi-photo.jpg" alt="Rakhi Celebration Picture" class="main-photo" />
 
     <div class="message">
@@ -74,7 +77,8 @@
       I love you💞💖!
       
       <audio controls autoplay loop>
-        <source src="sunshine.mp3" type="audio/mpeg" />
+        <source src="sunshine.mp3.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
       </audio>
     </div>
 
@@ -82,4 +86,3 @@
 
 </body>
 </html>
-
