@@ -76,13 +76,25 @@
 
       I love you💞💖!
       
-      <audio controls autoplay loop>
-        <source src="sunshine.mp3.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+     <audio id="audio" controls loop>
+  <source src="sunshine.mp3.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('audio');
+    audio.play().catch(() => {
+      // Autoplay was prevented.
+      // Show a button or message to let user start audio manually
+      console.log('Autoplay prevented, please click to play audio.');
+    });
+  });
+</script>
+ </div>
 
   </div>
 
 </body>
 </html>
+
