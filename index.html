@@ -5,128 +5,81 @@
   <title>Happy Rakhi!</title>
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff8e1; /* light yellow like Kerala */
-      color: #5d4037; /* warm brown */
-      margin: 0;
-      padding: 40px 20px;
+      font-family: Georgia, serif;
+      background-color: #ffffff; /* crisp white */
+      color: #2e4a1f; /* dark green */
+      margin: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      box-sizing: border-box;
-      position: relative;
-      overflow-x: hidden;
+      min-height: 90vh;
     }
     .container {
+      background: #e6f2d9; /* soft pale green */
+      box-shadow: 0 4px 12px rgba(46, 74, 31, 0.25);
+      border-radius: 20px;
+      padding: 30px 40px;
+      max-width: 850px;
       display: flex;
+      gap: 40px;
       align-items: center;
-      max-width: 900px;
-      background: #fff3e0;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
-      padding: 30px;
-      gap: 30px;
-      z-index: 2;
-      position: relative;
     }
     img.main-photo {
-      max-width: 350px;
-      border-radius: 15px;
-      box-shadow: 0 6px 18px rgba(93, 64, 55, 0.25);
+      max-width: 320px;
+      border-radius: 20px;
+      box-shadow: 0 6px 14px rgba(46, 74, 31, 0.3);
     }
     .message {
+      max-width: 520px;
       font-size: 20px;
       line-height: 1.6;
-      flex: 1;
       white-space: pre-line;
-      font-weight: 500;
-    }
-    audio {
-      width: 100%;
-      margin-top: 30px;
-      outline: none;
-    }
-    /* Jasmine flower corners */
-    .flower-top-left, .flower-bottom-right {
-      position: fixed;
-      width: 120px;
-      opacity: 0.15;
-      pointer-events: none;
-      z-index: 1;
-    }
-    .flower-top-left {
-      top: 20px;
-      left: 20px;
-      transform: rotate(-15deg);
-    }
-    .flower-bottom-right {
-      bottom: 20px;
-      right: 20px;
-      transform: rotate(10deg);
-    }
-    /* Garland styling */
-    .garland {
-      display: block;
-      max-width: 400px;
-      margin: 40px auto 0 auto;
-      border-radius: 15px;
-      box-shadow: 0 3px 12px rgba(93, 64, 55, 0.2);
-      z-index: 2;
-      position: relative;
     }
     h1 {
-      position: fixed;
-      top: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: "Brush Script MT", cursive;
-      font-size: 2.8rem;
-      color: #bf360c; /* deep orange */
-      text-shadow: 1px 1px 3px #ffd180;
-      z-index: 3;
-      user-select: none;
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #1b3410; /* even darker green for heading */
+      text-align: center;
+      font-weight: normal;
+    }
+    audio {
+      display: block;
+      margin: 30px auto 0 auto;
+      outline: none;
+      width: 100%;
+      max-width: 500px;
     }
   </style>
 </head>
 <body>
 
-  <h1>🌷🌻Happy Rakhi, Annaya!❤️</h1>
-
-  <!-- Jasmine flowers on corners -->
-  <img src="jasmine-flower.webp" alt="Jasmine flower" class="flower-top-left" />
-  <img src="jasmine-flower.webp" alt="Jasmine flower" class="flower-bottom-right" />
-
   <div class="container">
-    <!-- Main photo -->
+
     <img src="rakhi-photo.jpg.JPG" alt="Rakhi Celebration Picture" class="main-photo" />
 
-    <!-- Your heartfelt message -->
     <div class="message">
-Happy Rakhi, Annaya!
+      <h1>🌷🌻Happy Rakhi, Annaya!❤️</h1>
 
-You have been a lifesaver. I am everything I am because of you — all the good parts of me.
-I love you always and forever.
+      Happy Rakhi, Annaya!<br><br>
 
-I hope I can give you all the things you did for me sometime soon.
-I will always wait for you to bring me your share of love and sorrows to share, just like those Cheetos packets back when we were kids.
+      You have been a lifesaver. I am everything I am because of you — all the good parts of me.<br>
+      I love you always and forever.<br><br>
 
-Hope we can celebrate Diwali with our families this time around.
-Let’s always have each other’s back.
+      I hope I can give you all the things you did for me sometime soon.<br>
+      I will always wait for you to bring me your share of love and sorrows to share, just like those Cheetos packets back when we were kids.<br><br>
 
-I love you💞💖!
+      Hope we can celebrate Diwali with our families this time around.<br>
+      Let’s always have each other’s back.<br><br>
+
+      I love you💞💖!
+      
+      <audio controls autoplay loop>
+        <source src="sunshine.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
     </div>
+
   </div>
-
-  <!-- Garland decoration -->
-  <img src="garland.png" alt="Garland decoration" class="garland" />
-
-  <!-- Audio player with autoplay -->
-  <audio controls autoplay loop>
-    <source src="You are my Sunshine-Nikki.mp3.m4a" type="audio/mp4" />
-    Your browser does not support the audio element.
-  </audio>
 
 </body>
 </html>
-
